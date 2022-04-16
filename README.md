@@ -17,3 +17,8 @@ dns
 - cloudflare 
     - 1.1.1.1 
     - 1.0.0.1
+- shecan
+    - 178.22.122.100
+    - 185.51.200.2
+    - free.shecan.ir
+    - https://free.shecan.ir/dns-query
