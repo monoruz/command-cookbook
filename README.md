@@ -1,4 +1,13 @@
 # command-cookbook
+## Docker
+docker copy file from image to host
+
+    docker run --rm --entrypoint cat yourimage  /path/to/file > path/to/destination
+docker cp
+
+    docker cp ./some_file CONTAINER:/work
+    docker cp CONTAINER:/var/logs/ /tmp/app_logs
+    docker cp CONTAINER:/var/logs/app.log - | tar x -O | grep "ERROR"
 ## ufw
     ufw allow <port>,<port>,.../<protocol>
     ufw allow <from-port>:<to-port>/<protocol>
