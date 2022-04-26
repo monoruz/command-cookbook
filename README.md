@@ -8,6 +8,9 @@ docker cp
     docker cp ./some_file CONTAINER:/work
     docker cp CONTAINER:/var/logs/ /tmp/app_logs
     docker cp CONTAINER:/var/logs/app.log - | tar x -O | grep "ERROR"
+## SSH TUNNEL
+        
+    ssh -L <local:port>:<remote:port> root@<server-ip> -N 
 ## ufw
     ufw allow <port>,<port>,.../<protocol>
     ufw allow <from-port>:<to-port>/<protocol>
