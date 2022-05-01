@@ -1,4 +1,7 @@
 # command-cookbook
+## listen tcp
+        
+    netcat -u host port
 ## Docker
 docker copy file from image to host
 
