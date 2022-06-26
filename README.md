@@ -38,8 +38,12 @@ dns
     - free.shecan.ir
     - https://free.shecan.ir/dns-query
 ## lvm
-    
     growpart /dev/sdc <n>
     pvresize /dev/sdc<n>
     lvresize -l+100%FREE /dev/mapper/vg2-lv_varlibdocker
     resize2fs /dev/vg2/lv_varlibdocker
+## user
+### login as root
+    sudo -i
+### login as another user
+    su -l <user>
