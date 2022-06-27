@@ -13,4 +13,6 @@
 - 9 force
 - 15 terminate
 ## listen on netcat
-    netcat -l <port>
+    netcat -l <port> > <file>
+    netcat <domain> <port> < <file>
+    while true; do printf 'HTTP/1.1 200 OK\n\n%s' "$(cat index.html)" | netcat -l 8888; done
