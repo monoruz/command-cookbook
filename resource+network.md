@@ -12,5 +12,5 @@
 ## kill signals
 - 9 force
 - 15 terminate
-
-    
+## listen on netcat
+    netcat -l <port>
