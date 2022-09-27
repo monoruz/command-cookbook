@@ -17,3 +17,5 @@
     netcat -lu <port> > <file> #udp
     netcat <domain> <port> < <file>
     while true; do printf 'HTTP/1.1 200 OK\n\n%s' "$(cat index.html)" | netcat -l 8888; done
+## fuser
+    fuser -v -n tcp <port>
