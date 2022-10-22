@@ -18,6 +18,9 @@
     netcat <domain> <port> < <file>
     while true; do printf 'HTTP/1.1 200 OK\n\n%s' "$(cat index.html)" | netcat -l 8888; done
 ## fuser
-    fuser -v -n tcp <port>
+```bash
+fuser -v -n tcp <port> 
+fuser -k 80/tcp
+```
 ## listening ports list
     ss -nlt
