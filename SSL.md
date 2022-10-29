@@ -1,6 +1,6 @@
 # SSL
 ## check certfile
-```console
+```properties
 openssl x509 -text -noout -in cert.pem
 ```
 ## check cert of website
