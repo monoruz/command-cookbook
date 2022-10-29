@@ -1,14 +1,14 @@
 # SSL
 ## check certfile
-```bash
+```zsh
 openssl x509 -text -noout -in cert.pem
 ```
 ## check cert of website
-```bash
+```zsh
 openssl s_client -connect www.homeca.ir:443
 ```
 ## generete letsencrypt
 ### DNS
-```bash
+```zsh
 certbot certonly --manual --preferred-challenges dns -d '*.a.com'
 ```
