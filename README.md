@@ -13,7 +13,11 @@ docker cp
     docker cp CONTAINER:/var/logs/app.log - | tar x -O | grep "ERROR"
 ## SSH TUNNEL
         
-    ssh -L <local:port>:<remote:port> root@<server-ip> -N 
+    ssh -L <local:port>:<remote:port> root@<server-ip> -N
+## SSH with socks5
+```
+ssh -o "ProxyCommand=ncat --proxy-type socks5 --proxy 127.0.0.1:1080 %h %p" user@server
+```
 ## ufw
     ufw allow <port>,<port>,.../<protocol>
     ufw allow <from-port>:<to-port>/<protocol>
