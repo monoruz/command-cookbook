@@ -51,3 +51,7 @@ dns
     sudo -i
 ### login as another user
     su -l <user>
+## certbot
+```
+certbot certonly -d "*.arv.mn-service.ir" --manual --preferred-challenges dns 
+```
