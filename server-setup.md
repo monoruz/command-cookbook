@@ -72,6 +72,13 @@ ufw status
 ```
 wget https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-amd64 -O  /usr/local/bin/gitlab-runner
 chmod +x  /usr/local/bin/gitlab-runner
+mkdir /home/gitlab-runner
+gitlab-runner install --user=root --working-directory=/home/gitlab-runner
+gitlab-runner start
+```
+## gitlab runner debug
+```
+gitlab-runner --debug run
 ```
 ## mc
 ```
