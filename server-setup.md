@@ -85,3 +85,12 @@ gitlab-runner --debug run
 wget https://dl.min.io/client/mc/release/linux-amd64/mc  -O  /usr/local/bin/mc
 chmod +x  /usr/local/bin/mc
 ```
+## Fish Activate
+```bash
+apt-add-repository ppa:fish-shell/release-3
+apt install fish
+chsh -s /usr/bin/fish
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+omf themes theme
+omf install https://github.com/dracula/fish
+```
