@@ -94,3 +94,29 @@ curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install 
 omf themes theme
 omf install https://github.com/dracula/fish
 ```
+## traefik
+```bash
+mkdir -p /etc/traefik
+mkdir -p /etc/traefik/conf.d
+cd /etc/traefik
+wget https://github.com/traefik/traefik/releases/download/v2.9.6/traefik_v2.9.6_linux_amd64.tar.gz
+tar -xzvf traefik_v2.9.6_linux_amd64.tar.gz
+mv traefik /usr/local/bin/
+chmod +x /usr/local/bin/traefik
+wget https://repo.s3.ir-thr-at1.arvanstorage.ir/traefik.service -O /etc/systemd/system/traefik.service
+wget https://repo.s3.ir-thr-at1.arvanstorage.ir/v2ravesh.yml -O /etc/traefik/conf.d/v2ravesh.yml
+systemctl restart traefik
+systemctl status traefik
+```
+## v2ray
+install
+```bash
+curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh | bash
+curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-dat-release.sh | bash
+wget https://tange.mn-service.ir/alborz/alborz.mnse.store -O /usr/local/etc/v2ray/alborz.mnse.store
+systemctl restart v2ray@alborz.mnse.store
+```
+uninstall 
+```
+curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh | bash --remove
+```
