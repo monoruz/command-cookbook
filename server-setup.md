@@ -104,7 +104,10 @@ tar -xzvf traefik_v2.9.6_linux_amd64.tar.gz
 mv traefik /usr/local/bin/
 chmod +x /usr/local/bin/traefik
 wget https://repo.s3.ir-thr-at1.arvanstorage.ir/traefik.service -O /etc/systemd/system/traefik.service
+wget https://repo.s3.ir-thr-at1.arvanstorage.ir/traefik.yml -O /etc/traefik/traefik.yml
+
 wget https://repo.s3.ir-thr-at1.arvanstorage.ir/v2ravesh.yml -O /etc/traefik/conf.d/v2ravesh.yml
+
 systemctl restart traefik
 systemctl status traefik
 ```
