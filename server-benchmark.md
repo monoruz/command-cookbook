@@ -1,8 +1,9 @@
 # Server Benchmark
 ## intenet speed
-    curl -Lo speedtest-cli https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py
-    chmod +x speedtest-cli
-    speedtest-cli
+```
+curl -Lo https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py
+python3 speedtest.py
+```
 ## intraserver speed
     iperf3 -c <host> -p <port> 
 ## hard speed
