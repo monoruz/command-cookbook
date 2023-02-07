@@ -1,7 +1,7 @@
 # Server Benchmark
 ## intenet speed
 ```
-curl -Lo https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py
+wget https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py
 python3 speedtest.py
 ```
 ## intraserver speed
