@@ -1,4 +1,8 @@
 # Server Benchmark
+## Total benchmark
+```
+curl -L https://raw.githubusercontent.com/masonr/yet-another-bench-script/master/yabs.sh |bash
+```
 ## intenet speed
 ```
 wget https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py
