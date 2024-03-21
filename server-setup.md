@@ -76,6 +76,10 @@ mkdir /home/gitlab-runner
 gitlab-runner install --user=root --working-directory=/home/gitlab-runner
 gitlab-runner start
 ```
+## add runner to sudoers with no passwd
+```
+echo 'github-runner ALL=(ALL) NOPASSWD:ALL' | sudo EDITOR='tee -a' visudo
+```
 ## gitlab runner debug
 ```
 gitlab-runner --debug run
