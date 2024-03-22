@@ -80,6 +80,10 @@ gitlab-runner start
 ```
 echo 'github-runner ALL=(ALL) NOPASSWD:ALL' | sudo EDITOR='tee -a' visudo
 ```
+## permission denied problem
+```
+sudo usermod -a -G docker <user>
+```
 ## gitlab runner debug
 ```
 gitlab-runner --debug run
