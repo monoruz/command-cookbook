@@ -109,6 +109,7 @@ mkdir -p /etc/traefik/conf.d
 cd /etc/traefik
 wget https://github.com/traefik/traefik/releases/download/v2.9.6/traefik_v2.9.6_linux_amd64.tar.gz
 tar -xzvf traefik_v2.9.6_linux_amd64.tar.gz
+rm traefik_v2.9.6_linux_amd64.tar.gz CHANGELOG.md LICENSE.md
 mv traefik /usr/local/bin/
 chmod +x /usr/local/bin/traefik
 wget https://repo.s3.ir-thr-at1.arvanstorage.ir/traefik.service -O /etc/systemd/system/traefik.service
@@ -119,6 +120,17 @@ wget https://repo.s3.ir-thr-at1.arvanstorage.ir/middleware.yml -O /etc/traefik/c
 systemctl enable traefik
 systemctl restart traefik
 systemctl status traefik
+```
+## CoreDNS
+```bash
+cat /etc/resolv.conf > /etc/resolv.conf.bk
+cat /etc/resolv.conf.bk > /etc/resolv.conf
+mkdir -p /etc/coredns
+cd /etc/coredns
+wget https://github.com/coredns/coredns/releases/download/v1.11.1/coredns_1.11.1_linux_amd64.tgz
+tar -xzf coredns_1.11.1_linux_amd64.tgz
+mv coredns /usr/local/bin/
+chmod +x /usr/local/bin/coredns
 ```
 ## v2ray
 install
