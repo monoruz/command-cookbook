@@ -129,6 +129,7 @@ mkdir -p /etc/coredns
 cd /etc/coredns
 wget https://github.com/coredns/coredns/releases/download/v1.11.1/coredns_1.11.1_linux_amd64.tgz
 tar -xzf coredns_1.11.1_linux_amd64.tgz
+rm coredns_1.11.1_linux_amd64.tgz
 mv coredns /usr/local/bin/
 chmod +x /usr/local/bin/coredns
 ```
