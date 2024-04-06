@@ -132,6 +132,8 @@ tar -xzf coredns_1.11.1_linux_amd64.tgz
 rm coredns_1.11.1_linux_amd64.tgz
 mv coredns /usr/local/bin/
 chmod +x /usr/local/bin/coredns
+wget https://repo.s3.ir-thr-at1.arvanstorage.ir/coredns.service -O /etc/systemd/system/coredns.service
+wget https://repo.s3.ir-thr-at1.arvanstorage.ir/core.dns -O /etc/coredns/core.dns
 ```
 ## v2ray
 install
