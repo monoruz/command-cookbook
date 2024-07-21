@@ -8,6 +8,23 @@ curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install 
 omf themes theme
 omf install https://github.com/dracula/fish
 ```
+## fail2ban
+```
+apt install fail2ban
+cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+nano /etc/fail2ban/jail.local
+
+#bantime=2h
+#maximumretry = 3
+# [sshd] 
+# enabled = true
+
+systemctl enable fail2ban
+
+systemctl start fail2ban
+
+fail2ban-client status sshd
+```
 ## docker-compose setup
  ```
  #Uninstall old versions
@@ -36,23 +53,6 @@ systemctl start docker
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
-```
-## fail2ban
-```
-apt install fail2ban
-cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
-nano /etc/fail2ban/jail.local
-
-#bantime=2h
-#maximumretry = 3
-# [sshd] 
-# enabled = true
-
-systemctl enable fail2ban
-
-systemctl start fail2ban
-
-fail2ban-client status sshd
 ```
 ## nginx
 ```
