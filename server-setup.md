@@ -1,4 +1,13 @@
 # server setup
+## Fish Activate
+```bash
+apt-add-repository ppa:fish-shell/release-3
+apt install fish
+chsh -s /usr/bin/fish
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+omf themes theme
+omf install https://github.com/dracula/fish
+```
 ## docker-compose setup
  ```
  #Uninstall old versions
@@ -93,15 +102,6 @@ gitlab-runner --debug run
 wget https://dl.min.io/client/mc/release/linux-amd64/mc  -O  /usr/local/bin/mc
 chmod +x  /usr/local/bin/mc
 ```
-## Fish Activate
-```bash
-apt-add-repository ppa:fish-shell/release-3
-apt install fish
-chsh -s /usr/bin/fish
-curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
-omf themes theme
-omf install https://github.com/dracula/fish
-```
 ## traefik
 ```bash
 mkdir -p /etc/traefik
@@ -120,6 +120,14 @@ wget https://repo.s3.ir-thr-at1.arvanstorage.ir/middleware.yml -O /etc/traefik/c
 systemctl enable traefik
 systemctl restart traefik
 systemctl status traefik
+```
+## caddy
+```
+sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https curl
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
+sudo apt update
+sudo apt install caddy
 ```
 ## CoreDNS
 ```bash
