@@ -25,6 +25,16 @@ systemctl start fail2ban
 
 fail2ban-client status sshd
 ```
+## otel
+```
+curl -LO https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/v0.107.0/otelcol-contrib_0.107.0_linux_amd64.deb
+dpkg -i otelcol-contrib_0.107.0_linux_amd64.deb
+```
+## caddy
+```
+curl -LO https://github.com/caddyserver/caddy/releases/download/v2.8.4/caddy_2.8.4_linux_amd64.deb
+sudo dpkg -i caddy_2.8.4_linux_amd64.deb
+```
 ## docker-compose setup
  ```
  #Uninstall old versions
@@ -120,11 +130,6 @@ wget https://repo.s3.ir-thr-at1.arvanstorage.ir/middleware.yml -O /etc/traefik/c
 systemctl enable traefik
 systemctl restart traefik
 systemctl status traefik
-```
-## caddy
-```
-curl -LO https://github.com/caddyserver/caddy/releases/download/v2.8.4/caddy_2.8.4_linux_amd64.deb
-sudo dpkg -i caddy_2.8.4_linux_amd64.deb
 ```
 ## CoreDNS
 ```bash
