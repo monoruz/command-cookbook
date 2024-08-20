@@ -1,4 +1,10 @@
 # Resources
+## bandwidth monitor
+```
+iftop -i eth0 -f 'dst host 1.1.1.1 and dst port 443'
+```
+t: toggle oneline in host or only recieve
+T: cummulative ?
 ## port used and kill
     lsof -i :<port>
     kill -9 $(lsof -i :<port> | awk '{print$2}'
