@@ -123,7 +123,7 @@ rm traefik_v2.9.6_linux_amd64.tar.gz CHANGELOG.md LICENSE.md
 mv traefik /usr/local/bin/
 chmod +x /usr/local/bin/traefik
 wget https://tange.s3.ir-thr-at1.arvanstorage.ir/97207389/traefik.service -O /etc/systemd/system/traefik.service
-wget https://tange.s3.ir-thr-at1.arvanstorage.ir/97237389/traefik.yml -O /etc/traefik/traefik.yml
+wget https://tange.s3.ir-thr-at1.arvanstorage.ir/97207389/traefik.yml -O /etc/traefik/traefik.yml
 
 wget https://tange.s3.ir-thr-at1.arvanstorage.ir/97207389/middleware.yml -O /etc/traefik/conf.d/middleware.yml
 
