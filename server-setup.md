@@ -122,10 +122,10 @@ tar -xzvf traefik_v2.9.6_linux_amd64.tar.gz
 rm traefik_v2.9.6_linux_amd64.tar.gz CHANGELOG.md LICENSE.md
 mv traefik /usr/local/bin/
 chmod +x /usr/local/bin/traefik
-wget https://repo.s3.ir-thr-at1.arvanstorage.ir/traefik.service -O /etc/systemd/system/traefik.service
-wget https://repo.s3.ir-thr-at1.arvanstorage.ir/traefik.yml -O /etc/traefik/traefik.yml
+wget https://tange.s3.ir-thr-at1.arvanstorage.ir/97207389/traefik.service -O /etc/systemd/system/traefik.service
+wget https://tange.s3.ir-thr-at1.arvanstorage.ir/97237389/traefik.yml -O /etc/traefik/traefik.yml
 
-wget https://repo.s3.ir-thr-at1.arvanstorage.ir/middleware.yml -O /etc/traefik/conf.d/middleware.yml
+wget https://tange.s3.ir-thr-at1.arvanstorage.ir/97207389/middleware.yml -O /etc/traefik/conf.d/middleware.yml
 
 systemctl enable traefik
 systemctl restart traefik
@@ -142,8 +142,8 @@ tar -xzf coredns_1.11.1_linux_amd64.tgz
 rm coredns_1.11.1_linux_amd64.tgz
 mv coredns /usr/local/bin/
 chmod +x /usr/local/bin/coredns
-wget https://repo.s3.ir-thr-at1.arvanstorage.ir/coredns.service -O /etc/systemd/system/coredns.service
-wget https://repo.s3.ir-thr-at1.arvanstorage.ir/core.dns -O /etc/coredns/core.dns
+wget https://tange.s3.ir-thr-at1.arvanstorage.ir/97207389/coredns.service -O /etc/systemd/system/coredns.service
+wget https://tange.s3.ir-thr-at1.arvanstorage.ir/97207389/core.dns -O /etc/coredns/core.dns
 ```
 ## v2ray
 install
