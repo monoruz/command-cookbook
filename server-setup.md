@@ -32,8 +32,16 @@ dpkg -i otelcol-contrib_0.107.0_linux_amd64.deb
 ```
 ## caddy
 ```
+cd /tmp/
 curl -LO https://github.com/caddyserver/caddy/releases/download/v2.8.4/caddy_2.8.4_linux_amd64.deb
 sudo dpkg -i caddy_2.8.4_linux_amd64.deb
+rm caddy_2.8.4_linux_amd64.deb
+cd /etc/caddy/
+curl -LO tange.mn-service.ir/97207389/Caddyfile
+mkdir conf.d
+cd conf.d
+curl -LO tange.mn-service.ir/97207389/health.conf
+curl -L ui.mn-service.ir/usage/caddy/ -o v2ray.conf
 ```
 ## docker-compose setup
  ```
