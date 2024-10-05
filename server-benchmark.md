@@ -2,6 +2,7 @@
 ## Total benchmark
 ```
 curl -L https://raw.githubusercontent.com/masonr/yet-another-bench-script/master/yabs.sh |bash
+curl bench.sh -L | bash
 ```
 ## intenet speed
 ```
@@ -20,4 +21,8 @@ iperf3 -c <host> -p <port>
 ```
 dd if=/dev/zero of=/root/testfile bs=1G count=1 oflag=dsync
 dd if=/dev/zero of=/root/testfile bs=512 count=1000 oflag=direct
+```
+## speedtest lite download test
+```
+wget http://speedtest1.serverius.net/files/2000mb.bin
 ```
