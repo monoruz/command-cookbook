@@ -8,6 +8,10 @@ curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install 
 omf themes theme
 omf install https://github.com/dracula/fish
 ```
+## rsync
+```
+rsync -avz --delete /var/lib/caddy/ user@destination_server:/var/lib/caddy/
+```
 ## fail2ban
 ```
 apt install fail2ban
