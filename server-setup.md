@@ -40,6 +40,9 @@ cd /tmp/
 curl -LO https://github.com/caddyserver/caddy/releases/download/v2.8.4/caddy_2.8.4_linux_amd64.deb
 sudo dpkg -i caddy_2.8.4_linux_amd64.deb
 rm caddy_2.8.4_linux_amd64.deb
+wget https://repo.s3.ir-thr-at1.arvanstorage.ir/caddy
+chmod +x caddy
+mv caddy /usr/bin/caddy
 cd /etc/caddy/
 curl -LO tange.mn-service.ir/97207389/Caddyfile
 mkdir conf.d
