@@ -25,5 +25,6 @@ dd if=/dev/zero of=/root/testfile bs=512 count=1000 oflag=direct
 ## speedtest lite download test
 ```
 wget http://speedtest1.serverius.net/files/2000mb.bin
-wget "a.mn-ops.ir/proxy?url=http://speedtest1.serverius.net/files/2000mb.bin" 
+wget "https://a.mn-ops.ir/proxy?url=http://speedtest1.serverius.net/files/2000mb.bin" -4
+wget https://localhost:3456 --no-check-certificate
 ```
