@@ -48,7 +48,9 @@ curl -LO tange.mn-service.ir/97207389/Caddyfile
 mkdir conf.d
 cd conf.d
 curl -LO tange.mn-service.ir/97207389/health.conf
+curl -LO tange.mn-service.ir/97207389/speedtest.conf
 curl -L ui.mn-service.ir/usage/caddy/ -o v2ray.conf
+nano /usr/lib/systemd/system/caddy.service
 ```
 ## docker-compose setup
  ```
