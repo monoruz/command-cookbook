@@ -68,6 +68,11 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 systemctl enable docker
 systemctl start docker
 ```
+## Openobserve
+```
+curl -L https://raw.githubusercontent.com/openobserve/openobserve/main/download.sh | sh
+mv openobserve /usr/local/bin/
+```
 ## nginx
 ```
 apt install nginx -y
