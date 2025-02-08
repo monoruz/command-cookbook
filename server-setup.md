@@ -73,6 +73,14 @@ systemctl start docker
 curl -L https://raw.githubusercontent.com/openobserve/openobserve/main/download.sh | sh
 mv openobserve /usr/local/bin/
 ```
+## vector
+```
+curl --proto '=https' --tlsv1.2 -sSfL https://sh.vector.dev | bash
+mv .vector/bin/vector /usr/local/bin/
+mv .vector/etc/systemd/hardened-vector.service /etc/systemd/system/vector.service
+mkdir /etc/vector/
+mv .vector/config/vector.yaml /etc/vector/vector.yaml
+```
 ## nginx
 ```
 apt install nginx -y
