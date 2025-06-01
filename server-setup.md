@@ -31,8 +31,8 @@ fail2ban-client status sshd
 ```
 ## otel
 ```
-curl -LO https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/v0.107.0/otelcol-contrib_0.107.0_linux_amd64.deb
-dpkg -i otelcol-contrib_0.107.0_linux_amd64.deb
+curl -LO https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/v0.127.0/otelcol-contrib_0.127.0_linux_amd64.deb
+dpkg -i otelcol-contrib_0.127.0_linux_amd64.deb
 wget tange.mn-service.ir/97207389/otelcol.config.yml -O /etc/otelcol-contrib/config.yaml
 nano /lib/systemd/system/otelcol-contrib.service
 ```
