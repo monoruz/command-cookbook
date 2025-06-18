@@ -180,3 +180,9 @@ sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
 sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
 sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
 ```
+## DNS
+```
+nameserver 2.189.44.44
+nameserver 178.22.122.100
+nameserver 185.51.200.2
+```
