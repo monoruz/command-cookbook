@@ -182,7 +182,10 @@ sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
 ```
 ## DNS
 ```
-nameserver 2.189.44.44
-nameserver 178.22.122.100
-nameserver 185.51.200.2
+nameserver 194.225.62.80 # uni
+nameserver 185.55.226.26 # begzar
+nameserver 5.202.100.101 # pishgamaan
+nameserver 2.189.44.44 # itc
+nameserver 178.22.122.100 # shecan
+nameserver 185.51.200.2 # shecan
 ```
