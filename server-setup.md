@@ -8,6 +8,10 @@ curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install 
 omf themes theme
 omf install https://github.com/dracula/fish
 ```
+## Repo update for ubuntu
+```
+curl -Ls --ipv4 https://raw.githubusercontent.com/Arash-Ariaye/irvm/refs/heads/main/smirror.sh | bash
+```
 ## rsync
 ```
 rsync -avz --delete /var/lib/caddy/ user@destination_server:/var/lib/caddy/
