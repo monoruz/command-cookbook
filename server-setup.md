@@ -171,8 +171,9 @@ install
 ```bash
 curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh | bash
 curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-dat-release.sh | bash
-wget https://tange.mn-service.ir/alborz/alborz.mnse.store -O /usr/local/etc/v2ray/alborz.mnse.store
-systemctl restart v2ray@alborz.mnse.store
+wget https://ui.mn-service.ir/usage/v2ray/97207389/ -O /usr/local/etc/v2ray/config.json
+systemctl start v2ray
+systemctl enable v2ray
 ```
 uninstall 
 ```
