@@ -4,9 +4,9 @@
 apt-add-repository ppa:fish-shell/release-3
 apt install fish
 chsh -s /usr/bin/fish
-curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
-omf themes theme
-omf install https://github.com/dracula/fish
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+fisher install dracula/fish
+fish_config theme choose "Dracula Official"
 ```
 ## Repo update for ubuntu
 ```
