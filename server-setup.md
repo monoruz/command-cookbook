@@ -6,7 +6,7 @@ apt install fish
 chsh -s /usr/bin/fish
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 fisher install dracula/fish
-fish_config theme choose "Dracula Official"
+echo "fish_config theme choose \"Dracula Official\"" >> .config/fish/config.fish
 ```
 ## Repo update for ubuntu
 ```
