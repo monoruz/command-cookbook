@@ -179,6 +179,15 @@ uninstall
 ```
 curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh | bash --remove
 ```
+## Xray
+install
+```
+curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh | bash
+```
+uninstall
+```
+bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ remove --purge
+```
 ## disable ipv6
 ```
 sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
