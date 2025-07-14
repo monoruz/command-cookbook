@@ -12,6 +12,25 @@ echo "fish_config theme choose \"Dracula Official\"" >> ~/.config/fish/config.fi
 ```
 curl -Ls --ipv4 https://raw.githubusercontent.com/Arash-Ariaye/irvm/refs/heads/main/smirror.sh | bash
 ```
+## disable ipv6
+```
+sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
+sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
+sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
+```
+## DNS
+```
+nameserver 194.225.62.80 # uni
+nameserver 185.55.226.26 # begzar
+nameserver 5.202.100.101 # pishgamaan
+nameserver 2.189.44.44 # itc
+nameserver 178.22.122.100 # shecan
+nameserver 185.51.200.2 # shecan
+```
+## docker nettool test network
+```
+docker run --rm -it travelping/nettools sh
+```
 ## rsync
 ```
 rsync -avz --delete /var/lib/caddy/ user@destination_server:/var/lib/caddy/
@@ -187,19 +206,4 @@ curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh | bash
 uninstall
 ```
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ remove --purge
-```
-## disable ipv6
-```
-sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
-sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
-sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
-```
-## DNS
-```
-nameserver 194.225.62.80 # uni
-nameserver 185.55.226.26 # begzar
-nameserver 5.202.100.101 # pishgamaan
-nameserver 2.189.44.44 # itc
-nameserver 178.22.122.100 # shecan
-nameserver 185.51.200.2 # shecan
 ```
