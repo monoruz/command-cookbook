@@ -9,17 +9,17 @@ fisher install dracula/fish
 echo "fish_config theme choose \"Dracula Official\"" >> ~/.config/fish/config.fish
 ```
 ## Repo update for ubuntu
-```
+```bash
 curl -Ls --ipv4 https://raw.githubusercontent.com/Arash-Ariaye/irvm/refs/heads/main/smirror.sh | bash
 ```
 ## disable ipv6
-```
+```bash
 sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
 sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
 sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
 ```
 ## DNS
-```
+```bash
 nameserver 194.225.62.80 # uni
 nameserver 185.55.226.26 # begzar
 nameserver 5.202.100.101 # pishgamaan
@@ -28,28 +28,19 @@ nameserver 178.22.122.100 # shecan
 nameserver 185.51.200.2 # shecan
 ```
 ## docker nettool test network
-```
+```bash
 docker run --rm -it travelping/nettools sh
 ```
 ## rsync
-```
+```bash
 rsync -avz --delete /var/lib/caddy/ user@destination_server:/var/lib/caddy/
 ```
 ## fail2ban
-```
+```bash
 apt install fail2ban
 cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
-nano /etc/fail2ban/jail.local
-
-#bantime=2h
-#maximumretry = 3
-# [sshd] 
-# enabled = true
-
 systemctl enable fail2ban
-
 systemctl start fail2ban
-
 fail2ban-client status sshd
 ```
 ## otel
@@ -103,21 +94,6 @@ mv .vector/bin/vector /usr/local/bin/
 mv .vector/etc/systemd/hardened-vector.service /etc/systemd/system/vector.service
 mkdir /etc/vector/
 mv .vector/config/vector.yaml /etc/vector/vector.yaml
-```
-## nginx
-```
-apt install nginx -y
-systemctl enable nginx
-systemctl start nginx
-```
-## ssh config
-```
-cd /etc/ssh/
-nano sshd_config
-#permitrootlogin -> no
-#ssh port 22 -> ?
-# clientaliveinterval 100
-systemctl restart sshd
 ```
 ## ufw 
 ```
@@ -185,25 +161,4 @@ chmod +x /usr/local/bin/coredns
 wget https://tange.s3.ir-thr-at1.arvanstorage.ir/97207389/coredns.service -O /etc/systemd/system/coredns.service
 wget https://tange.s3.ir-thr-at1.arvanstorage.ir/97207389/core.dns -O /etc/coredns/core.dns
 ```
-## v2ray
-install
-```bash
-curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh | bash
-curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-dat-release.sh | bash
-wget https://ui.mn-service.ir/usage/v2ray/97207389/ -O /usr/local/etc/v2ray/config.json
-systemctl start v2ray
-systemctl enable v2ray
-```
-uninstall 
-```
-curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh | bash --remove
-```
-## Xray
-install
-```
-curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh | bash
-```
-uninstall
-```
-bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ remove --purge
-```
+
