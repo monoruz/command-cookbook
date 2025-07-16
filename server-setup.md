@@ -113,6 +113,7 @@ gitlab-runner start
 ```
 ## add runner to sudoers with no passwd
 ```
+echo 'gitlab-runner ALL=(ALL) NOPASSWD:ALL' | sudo EDITOR='tee -a' visudo
 echo 'github-runner ALL=(ALL) NOPASSWD:ALL' | sudo EDITOR='tee -a' visudo
 ```
 ## permission denied problem
