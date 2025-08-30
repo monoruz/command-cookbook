@@ -29,7 +29,10 @@ fuser -v -n tcp <port>
 fuser -k 80/tcp
 ```
 ## portforward
+
 ```
+cd /etc/systemd/system/
+sudo tee portforward.service > /dev/null <<'EOF'
 [Unit]
 Description=Persistent SSH Reverse Tunnel
 After=network.target
@@ -44,4 +47,12 @@ RestartSec=10
 
 [Install]
 WantedBy=multi-user.target
+EOF
+nano portforward.service
 ```
+then run
+```
+sudo systemctl daemon-reload
+sudo systemctl enable --now portforward.service
+```
+
