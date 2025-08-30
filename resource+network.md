@@ -28,5 +28,19 @@ T: cummulative ?
 fuser -v -n tcp <port> 
 fuser -k 80/tcp
 ```
-## listening ports list
-    ss -nlt
+## portforward
+```
+Description=Persistent SSH Reverse Tunnel
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/ssh -NT \
+    -o ExitOnForwardFailure=yes \
+    -o ServerAliveInterval=60 \
+    -R 0.0.0.0:9000:localhost:8000 user@remote.server
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+```
