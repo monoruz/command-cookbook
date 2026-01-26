@@ -27,6 +27,10 @@ nameserver 2.189.44.44 # itc
 nameserver 178.22.122.100 # shecan
 nameserver 185.51.200.2 # shecan
 ```
+## Mirrors
+- https://mirrors.kubarcloud.com/
+- https://runflare.com/mirrors/
+- https://iran.chabokan.net/
 ## docker nettool test network
 ```bash
 docker run --rm -it travelping/nettools sh
