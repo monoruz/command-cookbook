@@ -26,6 +26,8 @@ nameserver 5.202.100.101 # pishgamaan
 nameserver 2.189.44.44 # itc
 nameserver 178.22.122.100 # shecan
 nameserver 185.51.200.2 # shecan
+nameserver 217.218.155.155 # arvan1
+nameserver 217.218.127.127 # arvan2
 ```
 ## Mirrors
 - https://mirrors.kubarcloud.com/
